@@ -11,10 +11,10 @@ set(CMAKE_CXX_FLAGS_DEBUG          "-O0 -g3")
 set(CMAKE_CXX_FLAGS_RELEASE        "-O3")
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "bin/")
 
-if (CMAKE_CXX_COMPILER MATCHES ".*clang")
+if ("${CMAKE_CXX_COMPILER_ID}" STREQUAL "Clang")
   set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -stdlib=libc++")
+  set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -stdlib=libc++")
 endif()
-
 
 #############################
 ########### FILES ###########
