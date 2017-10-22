@@ -1,4 +1,9 @@
 language: cpp
+addons:
+  apt:
+    sources:
+      - ubuntu-toolchain-r-test
+      - llvm-toolchain-precise-3.6
 compiler:
   clang
   gcc
