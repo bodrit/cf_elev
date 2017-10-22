@@ -5,15 +5,15 @@ project (elevator)
 ########### PARAMS ##########
 #############################
 enable_language(CXX)
-set(CMAKE_CXX_COMPILER "g++")
+set(CMAKE_CXX_COMPILER "/usr/bin/g++")
 set(CMAKE_CXX_FLAGS                "-std=c++11 -pthread -Wall -Wno-unknown-pragmas -Wno-sign-compare -Woverloaded-virtual -Wwrite-strings -Wno-unused")
 set(CMAKE_CXX_FLAGS_DEBUG          "-O0 -g3")
 set(CMAKE_CXX_FLAGS_RELEASE        "-O3")
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "bin/")
 
 if(${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
-  set(CMAKE_CXX_COMPILER "clang++")
-  set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -stdlib=libc++ -lc++abi")
+  set(CMAKE_CXX_COMPILER "/usr/bin/clang++")
+  set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -stdlib=libc++")
 endif(${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
 
 
