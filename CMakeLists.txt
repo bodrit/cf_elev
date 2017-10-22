@@ -4,7 +4,6 @@ project (elevator)
 #############################
 ########### PARAMS ##########
 #############################
-enable_language(CXX)
 set(CMAKE_CXX_COMPILER "/usr/bin/g++")
 set(CMAKE_CXX_FLAGS                "-std=c++11 -pthread -Wall -Wno-unknown-pragmas -Wno-sign-compare -Woverloaded-virtual -Wwrite-strings -Wno-unused")
 set(CMAKE_CXX_FLAGS_DEBUG          "-O0 -g3")
