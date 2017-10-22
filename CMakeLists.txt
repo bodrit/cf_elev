@@ -5,7 +5,7 @@ project (elevator)
 ########### PARAMS ##########
 #############################
 enable_language(CXX)
-set(CMAKE_CXX_FLAGS                "-std=c++11 -Wall -Wno-unknown-pragmas -Wno-sign-compare -Woverloaded-virtual -Wwrite-strings -Wno-unused")
+set(CMAKE_CXX_FLAGS                "-std=c++11 -pthread -Wall -Wno-unknown-pragmas -Wno-sign-compare -Woverloaded-virtual -Wwrite-strings -Wno-unused")
 set(CMAKE_CXX_FLAGS_DEBUG          "-O0 -g3")
 set(CMAKE_CXX_FLAGS_RELEASE        "-O3")
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "bin/")
