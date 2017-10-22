@@ -5,6 +5,5 @@ addons:
       - ubuntu-toolchain-r-test
       - llvm-toolchain-precise-3.6
 compiler:
-  clang
   gcc
 script: ./configure && make && make CTEST_OUTPUT_ON_FAILURE=1 test
