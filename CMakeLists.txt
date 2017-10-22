@@ -11,6 +11,7 @@ set(CMAKE_CXX_FLAGS_RELEASE        "-O3")
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "bin/")
 
 if(${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
+  set(CMAKE_CXX_COMPILER "clang++")
   set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -stdlib=libc++")
 endif(${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
 
