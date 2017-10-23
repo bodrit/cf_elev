@@ -3,7 +3,7 @@
 - clang 3.3+
 - gcc 4.9+
 
-git clone --recursive --branch=master https://github.com/igorous/cf_elev.git igorous/cf_elev
+git clone --recursive --branch=master https://github.com/igorous/cf_elev.git
 cmake . && make
 
 ## Run
