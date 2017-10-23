@@ -8,7 +8,7 @@ cmake . && make
 
 ## Run
 
-Usage: ./bin/elevator MAX_FLOOR FLOOR_HEIGHT ELEVATOR_MOVE_SPEED DOORS_TIME_GAP
+./bin/elevator MAX_FLOOR FLOOR_HEIGHT ELEVATOR_MOVE_SPEED DOORS_TIME_GAP
 ---------------------------------------------------------------------------
 MAX_FLOOR: integer, from interval [5, 20]"                                 
 FLOOR_HEIGHT: positive float, meters"                                      
@@ -21,8 +21,8 @@ if elevator was called inside or outside of elevator.
 
 ## Algo
 - If no calls: poll
-- If got single call from floor N: go to floor N, stop if got calls from intermediate
-floors while running
+- If got single call from floor N: go to floor N, on every floor check if got call from this floor
+while running
 - If got multiple calls - pick closest floor and run as if it's single call from that floor
 
 
