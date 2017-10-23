@@ -11,12 +11,12 @@ template<typename ValueType>
 class BlockingSet {
 public:
   void insert(const ValueType& value) {
-    std::lock_guard<std::mutex> lock (mtx);
+    std::lock_guard<std::mutex> lock (mtx_);
     data_.insert(value);
   }
 
   ValueType get_closest(const ValueType& value) {
-    std::lock_guard<std::mutex> lock (mtx);
+    std::lock_guard<std::mutex> lock (mtx_);
     if (data_.empty())
       return -1;
 
@@ -40,7 +40,7 @@ public:
   }
 
   bool CheckAndDelete(const ValueType& value) {
-    std::lock_guard<std::mutex> lock (mtx);
+    std::lock_guard<std::mutex> lock (mtx_);
     auto it = data_.find(value);
     if (it != data_.end()) {
       data_.erase(it);
@@ -51,7 +51,7 @@ public:
   }
 
 private:
-  std::mutex mtx;
+  std::mutex mtx_;
   std::set<ValueType> data_;
 };
 
