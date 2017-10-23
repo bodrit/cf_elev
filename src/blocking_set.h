@@ -39,7 +39,7 @@ public:
     return result;
   }
 
-  bool has(const ValueType& value) {
+  bool CheckAndDelete(const ValueType& value) {
     std::lock_guard<std::mutex> lock (mtx);
     auto it = data_.find(value);
     if (it != data_.end()) {

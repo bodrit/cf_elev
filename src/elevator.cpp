@@ -31,7 +31,7 @@ void Elevator::run() {
         cur_floor_ += dir ? -1 : 1;
 
         render_status();
-        if (next_floors_.has(cur_floor_)) {
+        if (next_floors_.CheckAndDelete(cur_floor_)) {
           doors_open();
         }
       }
