@@ -3,6 +3,7 @@
 #include "gtest/gtest.h"
 
 #include "config.h"
+#include "blocking_set.h"
 
 int main(int argc, char** argv)
 {

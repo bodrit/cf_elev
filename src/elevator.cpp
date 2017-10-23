@@ -9,10 +9,11 @@ using namespace std;
 namespace NElevator {
 
 
-Elevator::Elevator(Config cfg)
+Elevator::Elevator(Config cfg, ostream& out = cout)
   : cfg_(std::move(cfg))
   , cur_floor_(0)
   , floor_time_gap_(cfg_.floor_h / cfg_.move_speed)
+  , out_(out)
 {}
 
 void Elevator::run() {
@@ -48,13 +49,13 @@ void Elevator::call(FloorValueType next_floor) {
 }
 
 void Elevator::render_status() {
-  cout << "Current floor:" << cur_floor_ << endl;
+  out_ << "Current floor:" << cur_floor_ << endl;
 }
 
 void Elevator::doors_open() {
-  cout << "Doors opened" << endl;
+  out_ << "Doors opened" << endl;
   this_thread::sleep_for(ToSeconds(cfg_.doors_gap));
-  cout << "Doors closed" << endl;
+  out_ << "Doors closed" << endl;
 }
 
 

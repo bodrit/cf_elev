@@ -13,7 +13,7 @@ class Elevator {
 public:
   using FloorValueType = long long;
 
-  Elevator(Config cfg);
+  Elevator(Config cfg, ostream& out);
 
   void run();
   void call(FloorValueType next_floor);
@@ -28,6 +28,8 @@ private:
   Config cfg_;
   FloorValueType cur_floor_;
   float floor_time_gap_;
+
+  ostream& out_;
 };
 
 } // NElevator

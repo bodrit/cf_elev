@@ -16,7 +16,8 @@ int main(int argc, char** argv) {
     exit(1);
   }
 
-  NElevator::Elevator elev(cfg);
+
+  NElevator::Elevator elev(cfg, cout);
 
   auto elevator_main = [](NElevator::Elevator& elev) {
     elev.run();

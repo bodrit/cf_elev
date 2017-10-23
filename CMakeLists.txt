@@ -38,6 +38,6 @@ add_subdirectory (external/googletest)
 enable_testing()
 include_directories(${gtest_SOURCE_DIR}/include ${gtest_SOURCE_DIR})
 
-add_executable( run_tests test/main.cpp test/config_test.cpp src/config.h src/config.cpp test/blocking_set_test.cpp src/blocking_set.h)
+add_executable( run_tests test/main.cpp test/config_test.cpp src/config.cpp test/blocking_set_test.cpp test/elevator_test.cpp src/blocking_set.h src/elevator.cpp src/util.cpp)
 target_link_libraries(run_tests gtest gtest_main)
 add_test( run_tests bin/run_tests )
