@@ -23,7 +23,7 @@ Config::Config(int argc, char** argv)
 
 std::string Config::generate_help_msg() {
   stringstream msg;
-  msg << "Usage: ./elevator MAX_FLOOR FLOOR_HEIGHT ELEVATOR_MOVE_SPEED DOORS_TIME_GAP" << endl;
+  msg << "Usage: ./bin/elevator MAX_FLOOR FLOOR_HEIGHT ELEVATOR_MOVE_SPEED DOORS_TIME_GAP" << endl;
   msg << "---------------------------------------------------------------------------" << endl;
   msg << "MAX_FLOOR: integer, from interval [5, 20]"                                   << endl;
   msg << "FLOOR_HEIGHT: positive float, meters"                                        << endl;
