@@ -25,7 +25,7 @@ std::string Config::generate_help_msg() {
   stringstream msg;
   msg << "Usage: ./elevator MAX_FLOOR FLOOR_HEIGHT ELEVATOR_MOVE_SPEED DOORS_TIME_GAP" << endl;
   msg << "---------------------------------------------------------------------------" << endl;
-  msg << "MAX_FLOOR: integer, > 1"                                                     << endl;
+  msg << "MAX_FLOOR: integer, from interval [5, 20]"                                   << endl;
   msg << "FLOOR_HEIGHT: positive float, meters"                                        << endl;
   msg << "ELEVATOR_MOVE_SPEED: positive float, meters/sec"                             << endl;
   msg << "DOORS_TIME_GAP: positive float, time between doors opening and closing, sec" << endl;
