@@ -11,7 +11,7 @@ namespace NElev {
 
 Elevator::Elevator(Config cfg, ostream& out = cout)
   : cfg_(std::move(cfg))
-  , cur_floor_(0)
+  , cur_floor_(1)
   , floor_time_gap_(cfg_.floor_h / cfg_.move_speed)
   , out_(out)
 {}
