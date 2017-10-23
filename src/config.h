@@ -4,7 +4,7 @@
 
 #include "util.h"
 
-namespace NElevator {
+namespace NElev {
 
 struct Config {
 public:
@@ -35,4 +35,4 @@ public:
   float doors_gap = 1;
 };
 
-} // NElevator
+} // NElev

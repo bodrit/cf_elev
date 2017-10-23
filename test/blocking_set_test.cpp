@@ -2,7 +2,7 @@
 #include "blocking_set.h"
 
 using namespace std;
-using namespace NElevator;
+using namespace NElev;
 
 namespace {
 

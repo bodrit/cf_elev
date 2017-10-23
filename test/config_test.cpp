@@ -4,7 +4,7 @@
 #include "config.h"
 
 using namespace std;
-using namespace NElevator;
+using namespace NElev;
 
 namespace {
 

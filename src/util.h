@@ -5,7 +5,7 @@
 #include <chrono>
 #include <cmath>
 
-namespace NElevator {
+namespace NElev {
 
 template<typename Type>
 Type from_string(const std::string& s) {
@@ -17,4 +17,4 @@ Type from_string(const std::string& s) {
 
 std::chrono::duration<int, std::milli> ToSeconds(float value);
 
-} // NElevator
+} // NElev

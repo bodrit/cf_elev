@@ -6,7 +6,7 @@
 
 using namespace std;
 
-namespace NElevator {
+namespace NElev {
 
 
 Elevator::Elevator(Config cfg, ostream& out = cout)
@@ -59,4 +59,4 @@ void Elevator::doors_open() {
 }
 
 
-} // NElevator
+} // NElev

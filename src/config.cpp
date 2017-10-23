@@ -7,7 +7,7 @@
 
 using namespace std; //it's ok for .cpp file
 
-namespace NElevator {
+namespace NElev {
 
 Config::Config(int argc, char** argv)
 {
@@ -33,4 +33,4 @@ std::string Config::generate_help_msg() {
   return msg.str();
 }
 
-} // NElevator
+} // NElev

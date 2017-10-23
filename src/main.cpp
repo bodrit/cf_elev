@@ -7,19 +7,19 @@
 #include "util.h"
 
 int main(int argc, char** argv) {
-  NElevator::Config cfg;
+  NElev::Config cfg;
 
   try {
-     cfg = NElevator::Config(argc, argv);
+     cfg = NElev::Config(argc, argv);
   } catch(const std::logic_error& e) {
     std::cout << e.what() << std::endl;
     exit(1);
   }
 
 
-  NElevator::Elevator elev(cfg, cout);
+  NElev::Elevator elev(cfg, cout);
 
-  auto elevator_main = [](NElevator::Elevator& elev) {
+  auto elevator_main = [](NElev::Elevator& elev) {
     elev.run();
   };
 
@@ -29,7 +29,7 @@ int main(int argc, char** argv) {
 
   for (std::string line; std::getline(std::cin, line);) {
     try {
-      auto floor = NElevator::from_string<long long>(line);
+      auto floor = NElev::from_string<long long>(line);
       if (floor < 1 || floor > cfg.max_floor) {
         cout << "Floor should be positive int from interval [1, " << cfg.max_floor << "]" << endl;
       } else {

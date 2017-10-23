@@ -6,7 +6,7 @@
 #include "elevator.h"
 #include "util.h"
 
-using namespace NElevator;
+using namespace NElev;
 
 namespace {
 
@@ -16,8 +16,8 @@ TEST(ElevatorTest, RegularMode) {
 
   stringstream log;
 
-  NElevator::Elevator elev(cfg, log);
-  auto elevator_daemon = std::thread([](NElevator::Elevator& elev){ elev.run(); }, std::ref(elev));
+  NElev::Elevator elev(cfg, log);
+  auto elevator_daemon = std::thread([](NElev::Elevator& elev){ elev.run(); }, std::ref(elev));
   elevator_daemon.detach();
 
   elev.call(6);

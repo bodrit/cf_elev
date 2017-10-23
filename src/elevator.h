@@ -7,7 +7,7 @@
 
 using namespace std;
 
-namespace NElevator {
+namespace NElev {
 
 class Elevator {
 public:
@@ -32,5 +32,5 @@ private:
   ostream& out_;
 };
 
-} // NElevator
+} // NElev
 

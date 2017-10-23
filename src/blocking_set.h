@@ -5,7 +5,7 @@
 #include <algorithm>
 #include <set>
 
-namespace NElevator {
+namespace NElev {
 
 template<typename ValueType>
 class BlockingSet {
@@ -55,4 +55,4 @@ private:
   std::set<ValueType> data_;
 };
 
-} // NElevator
+} // NElev
