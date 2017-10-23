@@ -24,8 +24,7 @@ TEST(ElevatorTest, RegularMode) {
   elev.call(4);
   std::this_thread::sleep_for(ToSeconds(2));
 
-  EXPECT_EQ(log.str(), "Current floor:0\n"
-                      "Current floor:1\n"
+  EXPECT_EQ(log.str(), "Current floor:1\n"
                       "Current floor:2\n"
                       "Current floor:3\n"
                       "Current floor:4\n"
