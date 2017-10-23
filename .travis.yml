@@ -12,4 +12,4 @@ before_install:
  - eval "${MATRIX_EVAL}"
 compiler:
   gcc
-script: ./configure && make && make CTEST_OUTPUT_ON_FAILURE=1 test
+script: ./configure && make && ./bin/run_tests
